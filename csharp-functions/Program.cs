@@ -13,51 +13,31 @@ namespace csharp_functions
     {
         static void Main(string[] args)
         {
-
-
-
             //dato il seguente array di numeri [2, 6, 7, 5, 3, 9] già dichiarato nel vostro codice,
             //int[] arrInput = { 2, 6, 7, 5, 3, 9 };
 
-
-
             Console.WriteLine($"Di quanti elementi vuoi formare l'array di input?");
             Console.Write($"N = ");
-
-
             int N = 0;
             int.TryParse(Console.ReadLine(), out N);
             Console.WriteLine("\r\n");
-
-
-
-
 
             //creo l'array
             int[] arrInput = new int[N];
             //popolo l'array
             for(int i = 0; i < arrInput.Length; i++) 
             {
-
-                Console.Write($"Dimmi il contenuto della casella numero {i + 1}:    ");
-                
+                Console.Write($"Dimmi il contenuto della casella numero {i + 1}:    ");                
                 int.TryParse(Console.ReadLine(), out arrInput[i]);
             }
             Console.WriteLine("\r\n");
 
-
             var anInstanceofMyClass = new Program();
-
-
-            //si vogliono utilizzare le funzioni per:
-
 
             //Stampare l’array di numeri fornito a video
             Console.WriteLine($"Array d'Input:");
             anInstanceofMyClass.StampaArray(arrInput);
             Console.WriteLine("\r\n");
-
-
 
             //Stampare l’array di numeri fornito a video, dove ogni numero è stato prima elevato al quadrato
             Console.WriteLine($"Array d'Input al quadrato:");
