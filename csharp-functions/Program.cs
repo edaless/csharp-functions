@@ -17,9 +17,35 @@ namespace csharp_functions
 
 
             //dato il seguente array di numeri [2, 6, 7, 5, 3, 9] già dichiarato nel vostro codice,
-            int[] arrInput = { 2, 6, 7, 5, 3, 9 };
+            //int[] arrInput = { 2, 6, 7, 5, 3, 9 };
 
-            
+
+
+            Console.WriteLine($"Di quanti elementi vuoi formare l'array di input?");
+            Console.Write($"N = ");
+
+
+            int N = 0;
+            int.TryParse(Console.ReadLine(), out N);
+            Console.WriteLine("\r\n");
+
+
+
+
+
+            //creo l'array
+            int[] arrInput = new int[N];
+            //popolo l'array
+            for(int i = 0; i < arrInput.Length; i++) 
+            {
+
+                Console.Write($"Dimmi il contenuto della casella numero {i + 1}:    ");
+                
+                int.TryParse(Console.ReadLine(), out arrInput[i]);
+            }
+            Console.WriteLine("\r\n");
+
+
             var anInstanceofMyClass = new Program();
 
 
